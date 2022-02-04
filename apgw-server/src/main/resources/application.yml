@@ -1,0 +1,13 @@
+server:
+  port: 8095
+
+spring:
+  application:
+    name: apgw-server
+  cloud:
+    gateway:
+      routes:
+      - id: EuferUceda-Pizza
+        uri: http://localhost:60082
+        predicates:
+        - Path=/pizza/**
